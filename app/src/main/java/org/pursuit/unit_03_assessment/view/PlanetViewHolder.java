@@ -36,17 +36,12 @@ public class PlanetViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         nameTextView = itemView.findViewById(R.id.name_textView_RecyclerView);
         numberTextView = itemView.findViewById(R.id.number_textView_RecyclerView);
-        //imageImageView = itemView.findViewById(R.id.image_textView_RecyclerView);
         sharedPreferences = itemView.getContext().getApplicationContext().getSharedPreferences(TAG, Context.MODE_PRIVATE);
-
     }
 
     public void onBind(final MyPlanets myPlanets) {
         this.myPlanets=myPlanets;
         nameTextView.setText(myPlanets.getName());
-        //numberTextView.setText(myPlanets.getNumber());
-        //imageImageView.setImageURI(myPlanets.getImage());
-        //Picasso.get().load(myPlanets.getImage()).into(imageImageView);
 
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
